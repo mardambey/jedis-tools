@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>jar</packaging>
+	<groupId>redis.clients</groupId>
+	<artifactId>jedis-tools</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>jedis-tools</name>
+	<description>Some tools and helpers for Jedis (implements SortedSet, Map, and BlockingQueue Java interfaces on top of Redis).</description>
+	<url>https://github.com/mardambey/jedis-tools</url>
+
+	<issueManagement>
+		<system>github</system>
+		<url>http://github.com/mardambey/jedis-tools/issues</url>
+	</issueManagement>
+
+	<scm>
+		<url>http://github.com/mardambey/jedis-tools</url>
+		<connection>scm:git:git@github.com:mardambey/jedis-tools.git</connection>
+		<developerConnection>scm:git:git@github.com:mardambey/jedis-tools.git</developerConnection>
+	</scm>
+
+	<dependencies>
+	<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.0.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	  <dependency>
+    	<groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.16</version>
+      <scope>compile</scope>
+	  </dependency>		
+		<dependency>
+      <groupId>commons-pool</groupId>
+      <artifactId>commons-pool</artifactId>
+      <version>1.5.5</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
